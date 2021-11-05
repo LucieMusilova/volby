@@ -13,7 +13,12 @@ const App = () => {
     { name: "Beáta Skočdopolová", avatar: '/assets/candidate03.png' },
     { name: "Lubomír Poňuchálek", avatar: '/assets/candidate04.png' },
   ]), []);
+
   
+  const choosePrez = (prez) => {
+    setPresident(prez);
+  }
+
   return (
     <div className="container">
       <div className="castle">
@@ -35,6 +40,7 @@ const App = () => {
             key={c.name}
             name={c.name} 
             avatar={c.avatar} 
+            choosed={choosePrez}
           />
         ))}
       </div>
